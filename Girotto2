@@ -1,0 +1,542 @@
+#include<stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+#include <conio.h>
+//    void inicio();
+//    void menu();
+//    void pergunta();
+//    void escolher();
+//    void escolher2();
+//    void escolher3();
+//    void pergunta2();
+//    void pergunta3();
+
+void main(){
+	inicio();
+//	 menu();
+//   pergunta();
+//     escolher();
+//     escolher2();
+//     escolher3();
+//    pergunta2();
+//     pergunta3();
+}
+
+
+ void  inicio(){
+
+	printf("OLA!\n");
+	printf("-SEJA BEM-VINDO A O NOSSO PROGRAMA DE MINI JOGOS-\n");
+	printf("-O PROGRAMA OFERECE 3 MINI JOGOS PARA JOGAR-\n\n");
+    printf("ESCOLHA UMA DAS OPCOES ABAIXO PARA COMECAR\n\n");
+	printf("1-Perguntas e respostas.\n2-Advinhe o numero.\n3-Olho de cobra.\n4-Sair. ");
+    printf("\n\n");
+    	menu();
+}
+	   void menu(){
+//	   	char resposta1, resposta2, resposta3, resposta4;
+	   	int esc;
+	   	int p;
+	   	char rr;
+		int tentativas = 5;
+		int aleatorio = rand() %1000;
+		int numero;
+	   	scanf ("%d", &esc);
+//		int errado_1=0, certo_1=0;	
+     switch(esc){
+
+				case 1:
+					                                                               //PRIMEIRA QUESTAO
+				 pergunta();
+   					
+//   					
+
+ escolher();
+
+break;
+        			case 2:
+      
+        			pergunta2() ;                                                           //SEGUNDA QUESTAO 
+		
+					escolher2();
+	   
+   break;
+   
+   					case 3:                                                          //TERCEIRA QUESTAO
+            questao3();
+//           escolher3();
+   break;
+   
+   case 4:	
+//       opcao4();  
+  system("cls");
+   	exit(4);
+	  break; 
+	   
+	   default:
+
+   	printf("\tinvalido!");
+   	break;
+	 }
+}
+
+
+	                                                                                                     //PRIMEIRA QUESTAO**
+  void pergunta(){
+	   	char resposta2, resposta3, resposta4, resposta5, resposta6, resposta7; 
+	   	int esc;
+       system("cls");
+//		int errado_1=0, certo_1=0;	
+            
+					 	printf("----PERGUNTAS E RESPOSTAS-----\n\n");
+						 printf("#Primeira Pergunta\n\n") ;
+					 	printf("5+10 = ?\n\n");
+					 	printf("A)20\nB)15\nC)35\n\n");
+					 	
+					 	printf("Qual a alternativa certa?\n");
+					 	scanf("%6s", &resposta5);
+					 
+					    if (resposta5 == 'A'|| resposta5 == 'a'){
+												 	
+					 	  printf("resposta errada! :(\n");
+					 	  printf("resposta certa = B\n\n");
+////					 	  errado_1++;
+					 }else if(resposta5 == 'B' || resposta5 == 'b'){
+
+					 	  printf("resposta certa! :)\n\n");	 	  
+//					    certo_1++;
+//						
+					 	}else if (resposta5 == 'C' || resposta5 == 'c'){
+											 	
+					 	  printf("resposta errada! :(\n");
+					 	  printf("resposta certa = B\n\n");
+					 	  					 				 					 	
+					          }else {
+					          	
+					          	printf("caractere invalido!\n");
+				
+					} 
+			
+						printf("--------------------------------\n\n");
+					   printf("#Segunda Pergunta#  \n\n"); 
+					 	printf("Qual o lema da bandeira do Brasil?\n\n");
+					 	printf("A)Independencia ou morte\nB)LIberdade, Igualdade, Fraternidade\nC)Ordem e Progresso\n\n");
+					 	printf("Qual a alternativa certa?\n");
+					 	scanf("%7s", &resposta3);
+						 
+					    if ((resposta3 == 'A')||(resposta3 == 'a')){
+							 												
+					 	  printf("resposta errada! :(\n");
+					 	  printf("resposta certa = C\n\n");
+					
+					 }else if((resposta3 == 'B')||(resposta3 == 'b')){
+					
+					 	  printf("resposta errada! :(\n\n");
+					 	  printf("resposta certa = C\n\n");
+					    
+						}else if ((resposta3 == 'C')||(resposta3 == 'c')){
+					 	
+					 	  printf("resposta certa! :)\n");
+				
+					          }else {
+					          	
+					          	printf("caractere invalido!\n\n");
+					    }
+					
+							printf("--------------------------------\n\n");
+							printf("#Terceira Pergunta \n\n"); 
+					 	printf("\nQuem foi o primeiro homem a pisar na lua?\n");
+					
+					 	printf("A)Neymar \nB)Charles Duke\nC)Neil Armstrong\n\n");
+					 	
+					 	printf("Qual a alternativa certa?\n");
+					 	scanf("%8s", &resposta4);
+					 	 
+					    if ((resposta4 == 'A')||(resposta4 == 'a')){
+							
+					 	  printf("resposta errada! :(\n");
+					 	  printf("resposta certa = C\n\n");
+					
+					 }else if((resposta4 == 'B')||(resposta4 == 'b')){
+					
+					 	  printf("resposta errada! :(\n\n");
+					 	  printf("resposta certa = C");
+					    
+					 	}else if ((resposta4 == 'C')||(resposta4 == 'c')){
+						 
+					 	  printf("resposta certa! :)\n\n");
+					
+					          }else {
+					          	
+					          	printf("caractere invalido!\n");
+	} 
+	escolher();
+					    }
+ 
+ void escolher(){
+      char r;
+      char S, s, N, n;
+      do{
+
+        printf("\n\n\t\t Deseja jogar denovo? \n\t\t <S>Sim <N>Nao \n");      
+        scanf("%9s", &r);
+ 
+    if((r == 'S' )|| (r == 's' )) {
+	    system("cls");
+	    pergunta();
+	    escolher();
+//    	questao2();
+} else if ((r == 'N') || (r =='n')) {
+    
+    system("cls");
+
+    	main();
+//    	escolher();
+//		questao4();
+   
+} else {
+	printf("invalido!");
+
+system("cls");
+	  }
+	}  while (r!=s || r!=S || r!=N || r!=n);
+}
+	
+	void	escolher2(){
+      char rr;
+      char S, s, N, n;
+      do{
+        printf("\n\n\t\t Deseja jogar denovo? \n\t\t <S>Sim <N>Nao \n");      
+        scanf("%10s", &rr);
+        
+    if((rr== 'S' )|| (rr == 's' )) {
+	    system("cls");
+//	    main2();
+	    pergunta2();
+	
+//	    escolher2();
+//    	questao2();
+} else if (( rr == 'N') || (rr =='n')) {
+    
+    system("cls");
+
+    	main();
+//    	escolher();
+//		questao4();
+//		questao5();
+} else {
+	printf("invalido!");
+
+
+system("cls");
+
+	  }
+	 }while (rr!= S || rr!= s || rr!= N || rr!= n); 
+}
+  		
+ void	pergunta2(){                                                                // SEGUNDA QUESTAO****
+				 system("cls");
+				 int p;
+				int tentativas = 5;
+				int aleatorio = rand() %1000;
+				int numero;
+				for( numero = 1; numero <= tentativas; numero++)
+				{
+				printf("\nTentativa %d de %d \n", numero, tentativas);
+				printf("\nEscolha um numero: ");
+				scanf("%d", &p);
+				
+				if(p == aleatorio)
+				{
+					printf("\nParabens, voce acertou! \n");
+					break;
+				}
+				
+				else if (p > aleatorio)
+				{
+				   printf("\nO valor que voce escolheu foi maior do que o numero aleatorio!");
+				}
+				
+				else if (p < aleatorio)
+				{
+					printf("\nO valor que voce escolheu foi menor do que o numero aleatorio!");
+				}
+				else
+				{
+				printf("voce errou! tente novamente! \n");
+				}
+					
+				}
+				escolher2();
+	}
+
+	
+	
+	                                                                    //TERCEIRA QUESTAO**
+void questao3(){
+	 system("cls");
+	
+	
+ 
+
+
+	 printf("                                         OLHO DE COBRA          \n\n");
+//	 printf("jogador n1 : "); 
+//	 scanf("%s", &jogador1);
+//	 printf("\njogador n2 : ");
+//     scanf("%s", &jogador2);
+
+
+    printf("  instrucoes:                             ");
+
+    printf("\n\nEsse jogo e disputado por dois jogadores, o primeiro a chegar a 50 pontos sera o vencedor.\n");
+
+    printf("\nO computador ira jogar dois dados e a soma dos numeros vai ser adicionada a pontuacao do jogador\n");
+	
+	printf("\nO jogador pode escolher jogar os dados de novo ou passar sua vez para o adversario\n");
+	
+    printf("\nQuando o jogador escolhe passar a vez, os pontos que ele ja fez sao salvos e inicia-se a rodada do outro jogador\n");
+
+    printf("\nSe o jogador escolher jogar os dados novamente, a soma dos novos valores obtivos sera agregada a sua pontuacao, no entando podem haver desvantagens\n");
+	
+	printf("\nSe um dos dados resultar no numero 1, o jogador perde sua vez e os pontos acumulados na rodada\n");
+
+    printf("\nSe os dois dados resultarem em 1, o jogador perde todos os pontos que adquiriu no jogo, alem disso perdendo sua vez\n\n");
+system ("pause"); 
+
+	system ("cls");
+	int x, n1, n2;
+	int aleat = 0 ;
+	int v;
+	int esc = 0;
+	int j, q, f, y;
+	int primeiro = 1;
+	int segundo = 2;
+	int dad1, dad2;
+	int t=0;
+	int pontosjog1 = 0, pontosjog2 = 0;
+	aleat = rand()%6 + 1 ; 
+	 j = (dad1 && dad2);
+    q = (dad1>1 && dad2>1);
+    f = (dad1<2||dad2<2);
+    y = (dad1<2 && dad2<2);
+	srand(time(NULL));
+	
+	
+	char jogador1[15], jogador2[15];
+    aleat = dado();
+	printf("\nO computador vai escolher quem vai comecar\n");
+//	gets();
+	printf("jogador n1 : \n");
+	scanf("%s", &jogador1);
+//	gets(jogador1);
+	printf("jogador n2 : ");
+    scanf("%s", &jogador2);
+//    gets(jogador2);
+     int pontosjg1, pontosjg2;
+	if ( aleat<4){
+	v = 1 ;	//jogador1 joga primeiro
+	}else { 
+	v = 2 ; // jogador2 joga primeiro);
+	} 
+	while (esc!= 3){
+	if (v==1){
+     		
+	  printf("\n---%s---\n", jogador1);
+	 
+//		break;
+}else{
+
+//	 case 2 : 
+	 	printf("\n---%s---\n", jogador2);
+	 	
+//		break;	 	
+	 }
+       printf("\n1_deseja jogar? ou 2_finalizar turno?\n");
+        scanf("%d", &esc)  ; 
+//		system("cls");    	 
+  	       if (esc==1){
+  	 	        dad1 = dado(aleat);                                                
+  	 	        printf("dado1 = %d e",dad1);
+  	 	        getchar();
+  	 	        dad2 = dado(aleat);
+  	 	        printf(" dado2 = %d", dad2);
+  	 	        getchar();
+//  	 	              j = (dad1 && dad2);
+//        	 	      q = (dad1>1 && dad2>1);
+//        	 	      f = (dad1==1||dad2==2);
+//        	 	      y = (dad1==1 && dad2 ==2);
+  	 	        if (dad1 == 1 && dad2 == 1){   
+  	 	                           	if (v==1){
+//  	 	                           		case 1:
+											  v=2; 
+											   printf("%s perdeu todos os pontos:(\n", jogador1); 
+											  pontosjog1 = 0;
+											 } else if(v==2){
+  	 	                           		     v=1;                  		
+  	 	                           		 printf("%s perdeu todos os pontos :(\n", jogador2); 
+  	 	                           		     pontosjog2=0;
+											
+								}
+								   		
+  	 	      }else if(dad1 == 1 || dad2 ==1 ){
+  	 	      	              if(v==1){
+								   v=2;
+  	 	                           		 printf("%s perdeu os pontos e a vez\n", jogador1); 
+											  t = 0; 
+//											  break;
+  	 	                           	}else if(v==2){
+  	 	                           		     v=1;
+  	 	                           		 printf("%s perdeu os pontos e a vez\n", jogador2); 
+  	 	                           		     t=0;
+//  	 	                           		    break;							   
+		           
+								               
+											  }
+							
+			                  }else if (dad1>1 && dad2>1) {
+						 
+	                               if (v==1){                             
+					   t= t + (dad1+dad2);
+				        if((t+pontosjog1)<50){
+					     printf(" %s vai pontuar + %d", jogador1 , t);
+				      
+				              }else{
+				       	printf("\t %s VOCE GANHOU !!", jogador1);
+//				       	escolher3();
+				 }
+	        }
+                     else if(v==2){ 
+						 t = t + (dad1+dad2);
+		                 if((t+pontosjog2)<50){ 
+		 
+		 	            printf("%s vai pontuar + %d\n", jogador2, t);
+				     
+					     
+					    }else{
+				    
+					   	printf("\t%s VOCE GANHOU \n!!", jogador2);
+					   	escolher3();
+					   }
+				   }
+							   							   
+				   }
+			
+      	   
+}
+      
+else if (esc==2){
+	if(v==1){
+    		                                                    v=2;
+    		 			pontosjog1 = pontosjog1+t; //seus pontos + aquele turno
+    		                                                        
+    	}else if(v==2){
+    		   v=1;
+    		          pontosjog2 =  pontosjog2+t;
+		                        
+		}    
+		                                            t = 0;  
+	}
+	}
+}
+ 
+
+
+
+		int dado(int aleat){
+		
+//    int aleat;
+	aleat = rand()%6 + 1;
+	srand( time(NULL));
+    return aleat;
+}
+
+void escolher3(){
+	
+	  char h;
+      char S, s, N, n;
+      do{
+        printf("\n\n\t\t Deseja jogar denovo? \n\t\t <S>Sim <N>Nao \n");      
+        scanf("%10s", &h);
+        
+    if((h== 'S' )|| (h == 's' )) {
+	    system("cls");
+//	    main2();
+	    questao3();
+	
+//	    escolher2();
+//    	questao2();
+} else if (( h == 'N') || (h =='n')) {
+    
+    system("cls");
+
+    	main();
+//    	escolher();
+//		questao4();
+//		questao5();
+} else {
+	printf("invalido!");
+
+
+system("cls");
+
+	  }
+	 }while (h!= S || h!= s || h!= N || h!= n); 
+}
+	
+	
+
+	
+
+
+	
+		
+		
+	
+//	escolher3();	
+		
+		
+		
+	
+
+//void escolher3(){																
+//	 char h;
+//      char S, s, N, n;
+//      do{
+//
+//        printf("\n\n\t\t Deseja jogar denovo? \n\t\t <S>Sim <N>Nao \n");      
+//        scanf("%9s", &h);
+// 
+//    if((h == 'S' )|| (h == 's' )) {
+//	    system("cls");
+//	    pergunta3();
+////	    escolher3();
+////    	questao2();
+//} else if ((h == 'N') || (h =='n')) {
+//    
+//    system("cls");
+//
+//    	main();
+////    	escolher();
+////		questao4();
+//   
+//} else {
+//	printf("invalido!");
+//
+//system("cls");
+//	  }
+//	}  while (h!=s || h!=S || h!=N || h!=n);
+//}
+	
+//void main(){
+//	inicio();
+//	pergunta();
+//	menu();
+//	escolher();
+//    pergunta2();
+////	questao2();
+////	questao3();
+//	questao4(); //questao1(2)
+////	questao5();
+//}
